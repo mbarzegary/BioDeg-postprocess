@@ -1,6 +1,14 @@
-file_name = 'results/output_6.pvd'
-array_name = 'Mg'
-colorbar_title = 'Metal ions concentration'
+# parameters
+file_name = ''
+array_name = ''
+colorbar_title = ''
+
+# open the config file to read parameters
+with open("config.txt", 'r') as f:
+    lines = f.read().splitlines() 
+    file_name = lines[0]
+    array_name = lines[1]
+    colorbar_title = lines[2]
 
 #### import the simple module from the paraview
 from paraview.simple import *
